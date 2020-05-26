@@ -164,7 +164,7 @@ def team_names
 end
 
 def player_numbers(team)
-  game_hash.each do |home_o_away, team_info|
+  game_hash.each do |home_away, team_info|
     if team_info[:team_name] == team
       return helper_numbers(team_info[:players])
     end
