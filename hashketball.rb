@@ -157,6 +157,7 @@ def team_colors(team)
       return team_info[:colors]
     end
   end
+end
 
 def team_names
   team_names = [game_hash[:home][:team_name], game_hash[:away][:team_name]]
