@@ -191,5 +191,5 @@ end
 
 def big_shoe_rebounds
   players_array = game_hash[:home][:players] + game_hash[:away][:players]
-  players_array.sort_by {|player| player.shoe}
+  players_array.sort_by {|player| player[:shoe]}
 end
