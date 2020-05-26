@@ -163,7 +163,7 @@ def team_names
   team_names = [game_hash[:home][:team_name], game_hash[:away][:team_name]]
 end
 
-def player_statsO(player_name)
+def player_stats(player_name)
   game_hash.each do |home_away, team_info|
     if player_hash[:player_name] == player_name
       return player_hash
