@@ -158,7 +158,7 @@ end
 
 def get_players
   game_hash.values.map do |team_info|
-    team_info[:plyaers]
+    team_info[:players]
   end.flatten
 end
 
