@@ -127,19 +127,6 @@ end
 
 # Write code here
 
-# def num_points_scored(player_name)
-#   game_hash.each do |home_away, player_name|
-#     if player_name == player_name[:points]
-#       return player_name[:points]
-#     end
-#   end
-# end
-
-# def shoe_size(player_name)
-#   player_stats(player_name)[:shoe]
-# end
-
-
 def num_points_scored(name)
   player =  find_player(name)
   player[:points]
@@ -179,14 +166,6 @@ def player_numbers(team)
       return team_info[:numbers]
     end
   end
-
-# def helper_numbers(player_index)
-#   numbers = []
-#   (0...player_index.size).each do |player_hash|
-#     numbers << player_index[player_hash][:number]
-#   end
-#   return numbers
-# end
 
 def player_stats(player_name)
   game_hash.each do |home_away, team_info|
