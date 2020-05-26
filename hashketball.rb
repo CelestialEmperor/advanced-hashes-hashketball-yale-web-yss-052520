@@ -173,10 +173,12 @@ def team_names
   [game_hash[:home][:team_name], game_hash[:away][:team_name]]
 end
 
-def player_numbers (name)
-  player = find_player(name)
-  player[:number]
-end
+def player_numbers(team)
+  game_hash.each do |home_away, team_info|
+    if team == team_info[:team_name]
+      return team_info[:numbers]
+    end
+  end
 
 # def helper_numbers(player_index)
 #   numbers = []
