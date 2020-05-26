@@ -163,6 +163,11 @@ def team_names
   team_names = [game_hash[:home][:team_name], game_hash[:away][:team_name]]
 end
 
+def player_numbers(team)
+  game_hash.each do |home_o_away, team_info|
+    if team_info[:team_name] == team
+      return 
+
 def player_stats(player_name)
   game_hash.each do |home_away, team_info|
     if player_hash[:player_name] == player_name
