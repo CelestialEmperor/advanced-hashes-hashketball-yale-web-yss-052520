@@ -192,6 +192,6 @@ end
 def big_shoe_rebounds
   player_size = {}
   game_hash.each do |home_away, team_info|
-  
+  players_array = game_hash[:home][:players] + game_hash[:away][:players] players_array.sort_by {|player| player.shoe}
   end
 end
