@@ -1,3 +1,5 @@
+require 'pry'
+
 def game_hash
   {
     home: {
@@ -158,6 +160,7 @@ def team_colors(team)
 
 def team_names
   team_names = [game_hash[:home][:team_name], game_hash[:away][:team_name]]
+  binding.pry
 end
 
 end
