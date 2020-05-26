@@ -1,4 +1,3 @@
-# Write your code below game_hash
 def game_hash
   {
     home: {
@@ -127,3 +126,81 @@ def game_hash
 end
 
 # Write code here
+
+# def num_points_scored(player_name)
+#   game_hash.each do |home_away, player_name|
+#     if player_name == player_name[:points]
+#       return player_name[:points]
+#     end
+#   end
+# end
+
+# def shoe_size(player_name)
+#   player_stats(player_name)[:shoe]
+# end
+
+
+def num_points_scored(name)
+  player =  find_player(name)
+  player[:points]
+end
+
+def shoe_size (name)
+  player = find_player(name)
+  player[:shoe]
+end
+
+def find_player(name)
+  get_players.find do |player|
+    player[:player_name] == name
+  end
+end
+
+def get_players
+  game_hash.values.map do |team_info|
+    team_info[:plyaers]
+  end.flatten
+end
+
+def team_colors(team)
+  game_hash.each do |home_away, team_info|
+    if team == team_info[:team_name]
+      return team_info[:colors]
+    end
+  end
+
+def team_names
+  [game_hash[:home][:team_name], game_hash[:away][:team_name]]
+end
+
+def player_numbers(team)
+  game_hash.each do |home_away, team_info|
+    if team_info[:team_name] == team
+      return helper_numbers(team_info[:players])
+    end
+  end
+end
+
+def helper_numbers(player_index)
+  numbers = []
+  (0...player_index.size).each do |player_hash|
+    numbers << player_index[player_hash][:number]
+  end
+  return numbers
+end
+
+def player_stats(player_name)
+  game_hash.each do |home_away, team_info|
+    team_info[:players].each do |player_hash|
+      if player_hash[:player_name] == player_name
+        return player_hash
+      end
+    end
+  end
+end
+
+#def big_shoe_rebounds
+  #player_size = {}
+  #game_hash.each do |home_away, team_info|
+    #if 
+end
