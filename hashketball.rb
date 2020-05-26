@@ -165,8 +165,8 @@ end
 
 def player_stats(player_name)
   game_hash.each do |home_away, team_info|
-    if player_hash[:player_name] == player_name
-      return player_hash
+    if player_stats[:player_name] == player_name
+      return player_stats
     end
   end
 end
