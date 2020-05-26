@@ -174,6 +174,10 @@ end
 def helper_numbers(player_index)
   numbers = []
   (0...player_index.size).each do |player_hash|
+    numbers << player_index[player_hash][:number]
+  end
+  numbers
+end
 
 def player_stats(player_name)
   game_hash.each do |home_away, team_info|
