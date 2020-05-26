@@ -173,21 +173,18 @@ def team_names
   [game_hash[:home][:team_name], game_hash[:away][:team_name]]
 end
 
-def player_numbers(team)
-  game_hash.each do |home_away, team_info|
-    if team_info[:team_name] == team
-      return helper_numbers(team_info[:players])
-    end
-  end
+def player_numbers (name)
+  player = find_player(name)
+  player[:number]
 end
 
-def helper_numbers(player_index)
-  numbers = []
-  (0...player_index.size).each do |player_hash|
-    numbers << player_index[player_hash][:number]
-  end
-  return numbers
-end
+# def helper_numbers(player_index)
+#   numbers = []
+#   (0...player_index.size).each do |player_hash|
+#     numbers << player_index[player_hash][:number]
+#   end
+#   return numbers
+# end
 
 def player_stats(player_name)
   game_hash.each do |home_away, team_info|
