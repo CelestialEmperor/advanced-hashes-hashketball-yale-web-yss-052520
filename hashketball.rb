@@ -177,9 +177,6 @@ def player_stats(player_name)
   end
 end
 
-#def big_shoe_rebounds
-  #player_size = {}
-  #game_hash.each do |home_away, team_info|
-    #if 
+
 end
 end
